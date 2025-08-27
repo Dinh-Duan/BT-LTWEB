@@ -1,7 +1,9 @@
-package JDBC.Dao;
+package JDBC.dao;
 
-import JDBC.Models.UserModel;
+import JDBC.model.User;
+import JDBC.service.UserService;
 
 public interface UserDao {
-    UserModel get(String username);
+
+	User get(String username);
 }
