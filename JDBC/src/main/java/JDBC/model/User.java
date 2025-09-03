@@ -3,111 +3,102 @@ package JDBC.model;
 import java.io.Serializable;
 import java.sql.Date;
 
-public class User implements Serializable{
-	  private int id;
-	    private String email;
-	    private String userName;
-	    private String fullName;
-	    private String passWord;
-	    private String avatar;
-	    private int roleid;
-	    private String phone;
-	    private Date createdDate;
+public class User implements Serializable {
+	private static final long serialVersionUID = 1L;
+	private int id;
+	private String email;
+	private String userName;
+	private String fullName;
+	private String passWord;
+	private String avatar;
+	private String phone;
 
-	    // Constructor mặc định
-	    public User() {
-	    }
+	public User(String email, String userName, String fullName, String passWord, String avatar, String phone) {
+		super();
+		this.email = email;
+		this.userName = userName;
+		this.fullName = fullName;
+		this.passWord = passWord;
+		this.avatar = avatar;
+		this.phone = phone;
+	}
 
-	    // Constructor đầy đủ
-	    public User(int id, String email, String userName, String fullName, String passWord,
-	                String avatar, int roleid, String phone, Date createdDate) {
-	        this.id = id;
-	        this.email = email;
-	        this.userName = userName;
-	        this.fullName = fullName;
-	        this.passWord = passWord;
-	        this.avatar = avatar;
-	        this.roleid = roleid;
-	        this.phone = phone;
-	        this.createdDate = createdDate;
-	    }
+	public String getPhone() {
+		return phone;
+	}
 
-	    // Getter & Setter
-	    public int getId() {
-	        return id;
-	    }
-	    public void setId(int id) {
-	        this.id = id;
-	    }
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
 
-	    public String getEmail() {
-	        return email;
-	    }
-	    public void setEmail(String email) {
-	        this.email = email;
-	    }
+	public int getId() {
+		return id;
+	}
 
-	    public String getUserName() {
-	        return userName;
-	    }
-	    public void setUserName(String userName) {
-	        this.userName = userName;
-	    }
+	public void setId(int id) {
+		this.id = id;
+	}
 
-	    public String getFullName() {
-	        return fullName;
-	    }
-	    public void setFullName(String fullName) {
-	        this.fullName = fullName;
-	    }
+	public String getEmail() {
+		return email;
+	}
 
-	    public String getPassWord() {
-	        return passWord;
-	    }
-	    public void setPassWord(String passWord) {
-	        this.passWord = passWord;
-	    }
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-	    public String getAvatar() {
-	        return avatar;
-	    }
-	    public void setAvatar(String avatar) {
-	        this.avatar = avatar;
-	    }
+	public String getUserName() {
+		return userName;
+	}
 
-	    public int getRoleid() {
-	        return roleid;
-	    }
-	    public void setRoleid(int roleid) {
-	        this.roleid = roleid;
-	    }
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
 
-	    public String getPhone() {
-	        return phone;
-	    }
-	    public void setPhone(String phone) {
-	        this.phone = phone;
-	    }
+	public String getFullName() {
+		return fullName;
+	}
 
-	    public Date getCreatedDate() {
-	        return createdDate;
-	    }
-	    public void setCreatedDate(Date createdDate) {
-	        this.createdDate = createdDate;
-	    }
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
+	}
 
-	    @Override
-	    public String toString() {
-	        return "User{" +
-	                "id=" + id +
-	                ", email='" + email + '\'' +
-	                ", userName='" + userName + '\'' +
-	                ", fullName='" + fullName + '\'' +
-	                ", passWord='" + passWord + '\'' +
-	                ", avatar='" + avatar + '\'' +
-	                ", roleid=" + roleid +
-	                ", phone='" + phone + '\'' +
-	                ", createdDate=" + createdDate +
-	                '}';
-	    }
+	public String getPassWord() {
+		return passWord;
+	}
+
+	public void setPassWord(String passWord) {
+		this.passWord = passWord;
+	}
+
+	public String getAvatar() {
+		return avatar;
+	}
+
+	public void setAvatar(String avatar) {
+		this.avatar = avatar;
+	}
+
+	public User(int id, String email, String userName, String fullName, String passWord, String avatar) {
+		super();
+		this.id = id;
+		this.email = email;
+		this.userName = userName;
+		this.fullName = fullName;
+		this.passWord = passWord;
+		this.avatar = avatar;
+	}
+
+	public User() {
+		super();
+	}
+
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", email=" + email + ", userName=" + userName + ", fullName=" + fullName
+				+ ", passWord=" + passWord + ", avatar=" + avatar + "]";
+	}
+
+
+
 }
